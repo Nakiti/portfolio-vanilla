@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikhil Akiti Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="project-card.js" defer></script>
+  <script src="experience-card.js" defer></script>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+   />
+</head>
+<body>
+   <div class="cursor-spotlight"></div>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>Hello, I'm Nikhil</h1>
+      <h2>Software Engineer</h2>
+      <p>I'm a rising junior studying computer science at the University of California, San Diego with a passion for problem solving!</p>
+
+      <nav>
+        <ul>
+         <li><button data-section="about" onclick="scrollToSection('about')">About</button></li>
+         <li><button data-section="experience" onclick="scrollToSection('experience')">Experience</button></li>
+         <li><button data-section="projects" onclick="scrollToSection('projects')">Projects</button></li>
+        </ul>
+      </nav>
+
+      <a class="resume-btn" href="NikhilAkitiResume.pdf" target="_blank">Resume</a>
+
+      <div class="socials">
+        <a href="https://linkedin.com/in/nikhil-akiti-445bb6242/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:nikhilakiti91@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://github.com/nakiti" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section id="about" class="section">
+        <h1>About Me</h1>
+        <p class="bio">Hi, My name is Nikhil Akiti and I'm a second-year student at the University of California, San Diego studying computer science. I'm passionate the application of software engineering principles to the solution of problems that afflict our society, and hope to work towards resolving issues throughout my career.
+
+Through the combination of my coursework and personal projects I have a strong foundation in computer programming and am equipped with the skills encessary to bring an immediate impact to real-world projects. I am proficient coding in Java, JavaScript, C, and Python allowing me to effectively contribute to a variety of applications. I'm also versed in full-stack development, particulary creating web applications with React JS, Next JS, Node JS, TailWindCSS, and MySQL. In addition to my technical knowledge, I have experience working in service/support positions, giving me the soft skills necessary to be a valuable team member.
+
+In my free time, you can find me playing basketball, running, or playing guitar! Thanks for reading and I hope you enjoyed getting to know me!
+         </p>
+      </section>
+
+      <section id="experience" class="section">
+         <h1>Experience</h1>
+         
+         <experience-card
+            title="Computer Support Assistant"
+            company="UCSD"
+            link="https://cse.ucsd.edu/"
+            date="MAR 2025 – PRESENT"
+            description="I provided front-line user support for production computing facilities.\nI also installed and maintained hardware and software, such as application software and peripheral devices (printers, scanners, handheld devices), while troubleshooting network and system issues."
+            tags="Problem Solving,Communication,IT skills"
+         ></experience-card>
+
+         <experience-card
+            title="Undergraduate Research Assistant"
+            company="UCSD"
+            link="https://dl.acm.org/doi/10.1145/3704885"
+            date="OCT 2023 - JUN 2024"
+            description="I contributed to the implementation and debugging of a modified Rust object-relational mapping (ORM) library with generic refinements to enforce data invariants and detect errors at compile time. Published in a paper."
+            tags="Rust,Haskell,Diesel ORM,Rocket.rs,PostgreSQL"
+         ></experience-card>
+
+         <experience-card
+            title="Summer Intern"
+            company="Los Angeles Metro"
+            link="https://www.metro.net/about/careers/tcap/"
+            date="JUN 2022 - AUG 2022"
+            description="Collaborated on a preliminary renovation design for an LA Metro train station, contributing research on structural elements and design principles. Co-presented the proposal to interns and LA Metro staff, earning the highest project score among all teams for clarity, creativity, and feasibility."
+            tags="Teamwork,Collaboration,Time Management"
+         ></experience-card>
+         
+      </section>
+
+      <section id="projects" class="section">
+         <h1>Projects</h1>
+       
+         <project-card
+            title="Fundraising CMS"
+            description="Developed a fundraising platform allowing users to create campaigns and donation pages from a variety of templates. Inspired by Classy.org."
+            img="./images/fundraising-1.png"
+            link="/projects/fundraiser.html"
+            tags="React,Next.js,Node.js,Express,MySQL,Azure,Tailwind,Axios"
+         ></project-card>
+
+         <project-card
+            title="Mash"
+            description="Developed a full-stack web application (gaining over 50,000 visits) that uses the Elo ranking algorithm to generate crowdsourced rankings across hundreds of datasets. Users repeatedly choose between two options, and their input contributes to a dynamic, community-driven leaderboard."
+            img="./images/mash-1.png"
+            link="/projects/mash.html"
+            tags="React,Node.js,Express,MySQL,Heroku,Tailwind,Axios"
+         ></project-card>
+
+         <project-card
+            title="Note-ify"
+            description="Created a cross-platform mobile app that helps users study with custom flashcards delivered via notifications on a personalized schedule."
+            img="./images/noteify-1.png"
+            link="/projects/noteify.html"
+            tags="React Native,Expo API"
+         ></project-card>
+
+         <project-card
+            title="Ecommerce Aggregator"
+            description="Built a full-stack web platform that consolidates clothing from multiple brands, allowing users to browse, save, and manage favorites in one place. Designed a web scraper in python to get up-to-date data."
+            img="./images/ecommerce-1.png"
+            link="/projects/ecommerce.html"
+            tags="React JS,Next JS,Express JS,Node JS,Express JS,MySQL,Heroku,Python,Beautiful Soup"
+         ></project-card>
+         
+         <project-card
+            title="For Scale – Chrome Extension"
+            description="Developed a chrome extension to simplify obscure measurements by representing them in terms of familiar objects/concepts"
+            img="./images/forscale-1.jpg"
+            link="/projects/forscale.html"
+            tags="JavaScript,HTML,CSS,Google Chrome Extension API"
+         ></project-card>
+       
+      </section>
+       
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
