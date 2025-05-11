@@ -30,119 +30,171 @@ class ProjectPage extends HTMLElement {
 
       const style = document.createElement("style");
       style.textContent = `
-         .back-btn {
-            display: inline-block;
-            font-size: 0.95rem;
-            color: #5eead4;
-            text-decoration: none;
-            border: 1px solid #5eead4;
-            padding: 6px 12px;
-            border-radius: 8px;
-            transition: background 0.2s ease;
-         }
-
-         .back-btn:hover {
-            background: rgba(94, 234, 212, 0.1);
-         }
-         .project-page {
-            padding: 60px 40px;
-            max-width: 1100px;
-            margin: auto;
-            background: #0a192f;
-            color: #e0e0e0;
-            font-family: sans-serif;
-         }
-
-         .project-title {
-            font-size: 2rem;
-            margin-bottom: 12px;
-            color: white;
-         }
-
-         .project-content {
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-         }
-
-         .left {
-            flex: 1;
-            max-width: 600px;
-         }
-
-         .right {
-            flex: 1;
-            display: flex;
-            align-items: center;
-         }
-
-         .project-github {
-            display: inline-block;
-            margin-top: 12px;
-            font-size: 1.1rem;
-            color: #5eead4;
-            text-decoration: none;
-         }
-
-         .project-description {
-            font-size: 1rem;
-            color: #cbd5e1;
-            line-height: 1.7;
-            white-space: pre-wrap;
-         }
-
-         .carousel-gallery {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-         }
-
-         .carousel-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 12px;
-            opacity: 1;
-            transition: opacity 0.4s ease-in-out;
-         }
-
-         .nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255,);
-            color: gray;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 6px 14px;
-            z-index: 2;
-            opacity: 1;
-            border-radius: 30px;
-         }
-
-         .nav.left {
-            left: 10px;
-         }
-
-         .nav.right {
-            right: 10px;
-         }
-
-         @media (max-width: 800px) {
-            .project-content {
-               flex-direction: column;
-            }
-            .right {
-               align-items: flex-start;
-            }
-         }
-      `;
+      .back-btn {
+        display: inline-block;
+        font-size: 0.95rem;
+        color: #5eead4;
+        text-decoration: none;
+        border: 1px solid #5eead4;
+        padding: 6px 12px;
+        border-radius: 8px;
+        transition: background 0.2s ease;
+      }
+    
+      .back-btn:hover {
+        background: rgba(94, 234, 212, 0.1);
+      }
+    
+      .project-page {
+        padding: 60px 40px;
+        max-width: 1100px;
+        margin: auto;
+        background: #0a192f;
+        color: #e0e0e0;
+        font-family: sans-serif;
+      }
+    
+      .project-title {
+        font-size: 2rem;
+        margin-bottom: 12px;
+        color: white;
+      }
+    
+      .project-content {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+    
+      .left {
+        flex: 1;
+        max-width: 600px;
+      }
+    
+      .right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+    
+      .project-github {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 1.1rem;
+        color: #5eead4;
+        text-decoration: none;
+      }
+    
+      .project-description {
+        font-size: 1rem;
+        color: #cbd5e1;
+        line-height: 1.7;
+        white-space: pre-wrap;
+      }
+    
+      .carousel-gallery {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+      }
+    
+      .carousel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+        opacity: 1;
+        transition: opacity 0.4s ease-in-out;
+      }
+    
+      .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        color: gray;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 6px 14px;
+        z-index: 2;
+        opacity: 1;
+        border-radius: 30px;
+      }
+    
+      .nav.left {
+        left: 10px;
+      }
+    
+      .nav.right {
+        right: 10px;
+      }
+    
+      /* ✅ Actual responsive behavior */
+      @media (max-width: 768px) {
+        .project-page {
+          padding: 32px 20px;
+        }
+    
+        .project-title {
+          font-size: 1.4rem;
+          margin-bottom: 16px;
+        }
+    
+        .project-content {
+          flex-direction: column;
+          gap: 24px;
+        }
+    
+        .left,
+        .right {
+          max-width: 100%;
+          width: 100%;
+        }
+    
+        .right {
+          align-items: flex-start;
+        }
+    
+        .project-description {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+    
+        .carousel-gallery {
+          height: auto;
+          max-height: 240px;
+        }
+    
+        .carousel-img {
+          height: auto;
+          max-height: 240px;
+          object-fit: contain;
+        }
+    
+        .nav {
+          font-size: 1.2rem;
+          padding: 4px 10px;
+        }
+    
+        .project-github {
+          font-size: 1rem;
+          margin-top: 10px;
+        }
+    
+        .back-btn {
+          font-size: 0.85rem;
+          padding: 5px 10px;
+          margin-bottom: 12px;
+        }
+      }
+    `;
+    
 
       shadow.appendChild(style);
       shadow.appendChild(wrapper);
@@ -173,7 +225,7 @@ class ProjectPage extends HTMLElement {
       }
 
       function startAutoScroll() {
-         timer = setInterval(showNext, 5000);
+         timer = setInterval(showNext, 3000);
       }
 
       function resetAutoScroll() {

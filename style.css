@@ -1,3 +1,4 @@
+
 body {
    margin: 0;
    font-family: Arial, sans-serif;
@@ -175,3 +176,79 @@ body {
    border-radius: 8px;
    object-fit: contain;
  }
+
+ @media (max-width: 768px) {
+   .container {
+     flex-direction: column;
+     height: auto;
+   }
+ 
+   .sidebar {
+     width: 100%;
+     padding: 20px 16px;
+     border-right: none;
+     border-bottom: 1px solid #334155;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 6px;
+   }
+ 
+   .sidebar h1 {
+     font-size: 1.25rem;
+     margin: 0;
+   }
+ 
+   .sidebar h2,
+   .sidebar p,
+   .socials {
+     display: none;
+   }
+ 
+   .resume-btn {
+     margin: 0;
+     padding: 6px 12px;
+     font-size: 0.85rem;
+     border: 1px solid #5eead4;
+     color: #5eead4;
+     border-radius: 6px;
+     background: transparent;
+   }
+ 
+   .sidebar nav ul {
+     display: flex;
+     gap: 12px;
+     flex-wrap: wrap;
+     margin: 0px 0 0;
+     padding: 0;
+   }
+ 
+   .sidebar nav li {
+     margin: 0;
+   }
+ 
+   .sidebar nav button {
+     font-size: 0.9rem;
+     padding: 4px 10px;
+     border-left: none;
+   }
+ 
+   .main-content {
+     padding: 24px 16px;
+   }
+ 
+   .section h1 {
+     font-size: 1.1rem;
+   }
+ 
+   .project-page {
+     padding: 24px 16px;
+   }
+ 
+   .carousel-img {
+     height: 160px;
+   }
+   .section {
+      margin-bottom: 50px;
+    }
+ }
+ 
