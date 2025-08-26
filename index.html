@@ -26,7 +26,7 @@
     <aside class="sidebar">
       <h1>Hello, I'm Nikhil</h1>
       <h2>Software Engineer</h2>
-      <p>I'm a rising junior studying computer science at the University of California, San Diego with a passion for problem solving!</p>
+      <p>I'm a junior studying computer science at the University of California, San Diego with a passion for problem solving!</p>
 
       <nav>
         <ul>
@@ -48,7 +48,7 @@
     <main class="main-content">
       <section id="about" class="section">
         <h1>About Me</h1>
-        <p class="bio">Hi, My name is Nikhil Akiti and I'm a second-year student at the University of California, San Diego studying computer science. I'm passionate the application of software engineering principles to the solution of problems that afflict our society, and hope to work towards resolving issues throughout my career.
+        <p class="bio">Hi, My name is Nikhil Akiti and I'm a third-year student at the University of California, San Diego studying computer science. I'm passionate the application of software engineering principles to the solution of problems that afflict our society, and hope to work towards resolving issues throughout my career.
 
 Through the combination of my coursework and personal projects I have a strong foundation in computer programming and am equipped with the skills encessary to bring an immediate impact to real-world projects. I am proficient coding in Java, JavaScript, C, and Python allowing me to effectively contribute to a variety of applications. I'm also versed in full-stack development, particulary creating web applications with React JS, Next JS, Node JS, TailWindCSS, and MySQL. In addition to my technical knowledge, I have experience working in service/support positions, giving me the soft skills necessary to be a valuable team member.
 
@@ -58,13 +58,21 @@ In my free time, you can find me playing basketball, running, or playing guitar!
 
       <section id="experience" class="section">
          <h1>Experience</h1>
+         <experience-card
+            title="Student Software Engineer"
+            company="UCSD - IT Services"
+            link="https://blink.ucsd.edu/technology/index.html"
+            date="MAY 2025 – PRESENT"
+            description="As a student employee at ITS, I support the development, testing, and deployment of software applications and data solutions that serve the UC San Diego community. My responsibilities span application development, data analytics, and systems operations, involving tasks such as coding, debugging and automating workflows. Working alongside experienced professionals, I contribute to real-world projects using modern technologies while developing critical problem-solving, collaboration, and innovation skills."
+            tags="Python,Java,Docker,Kubernetes,Bamboo,Bash,Helm,.Net"
+         ></experience-card>
          
          <experience-card
             title="Computer Support Assistant"
             company="UCSD"
             link="https://cse.ucsd.edu/"
             date="MAR 2025 – PRESENT"
-            description="I provided front-line user support for production computing facilities.\nI also installed and maintained hardware and software, such as application software and peripheral devices (printers, scanners, handheld devices), while troubleshooting network and system issues."
+            description="I provided front-line user support for production computing facilities. I also installed and maintained hardware and software, such as application software and peripheral devices (printers, scanners, handheld devices), while troubleshooting network and system issues."
             tags="Problem Solving,Communication,IT skills"
          ></experience-card>
 
@@ -91,13 +99,19 @@ In my free time, you can find me playing basketball, running, or playing guitar!
       <section id="projects" class="section">
          <h1>Projects</h1>
          <project-card
+            title="Claimable AI"
+            description="Developed an agentic AI solution to assist users in writing appeals to medical insurance denials"
+            img="./images/fulfill-2.png"
+            link="/projects/claimableAI.html"
+            tags="ReactJS,Next.js,Node.js,Express,MySQL,Azure,Tailwind,Axios,OpenAI API"
+         ></project-card>
+         <project-card
             title="FulFill AI"
             description="Developed a full stack web application that integrates the OpenAI API to create an autofill/research assistant that assists users while writing in real time"
             img="./images/fulfill-2.png"
             link="/projects/fulfillAi.html"
             tags="ReactJS,Next.js,Node.js,Express,MySQL,Azure,Tailwind,Axios,OpenAI API"
          ></project-card>
-
          <project-card
             title="Fundraising CMS"
             description="Developed a fundraising platform allowing users to create campaigns and donation pages from a variety of templates. Inspired by Classy.org."
